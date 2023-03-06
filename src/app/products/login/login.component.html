@@ -1,0 +1,62 @@
+<!-- login heading -->
+<div class="container" style="margin-top: 110px;">
+    <div class="mt-5 text-center">
+        <h2 class="style2">Login Page <i class="fa-solid fa-user"></i></h2>
+    </div>
+</div>
+
+
+<!-- login info part -->
+<div *ngIf="logininfo" class="container about text-center style2 animate__animated animate__fadeIn" >
+  <div class="p-5 text-center"   >
+       <h1>Welcome</h1>
+       <p style="text-align: justify;" class="text-center mt-4">{{userEmail}}</p>
+       <h2>Happy shopping</h2>
+       <button (click)="logout()"  class="kjh btn btn-light" >Logout &nbsp;
+      </button> 
+      &nbsp;&nbsp;&nbsp;
+      <button (click)=" deleteAccount()"  class="kjh btn btn-light" >delete &nbsp;
+      </button> 
+  </div>
+  </div><br>
+  
+
+ <!-- login form part -->
+<div *ngIf="!logininfo" class="row mt-5">
+    <div class="col-md-4 mt-3"></div>
+    <div class="col-md-4 mt-3 text-center animate__animated animate__fadeIn">
+        <form (ngSubmit)="login()" [formGroup]="loginForm" class="border p-5 style2" style="background-color: rgb(200, 187, 211); border-radius: 30px;">
+            <div class="form-floating mb-3">
+                <input name="eml" formControlName="eml" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Email address</label>
+              </div> 
+              <!-- form Invalid -->
+              <div *ngIf="this.loginForm.get('eml')?.errors&&this.loginForm.get('eml')?.touched" class="text-danger mb-3">Invalid Email</div>
+
+              <div class="form-floating">
+                <input name="pswd" formControlName="pswd" type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                <label for="floatingPassword">Password</label>
+              </div>
+              <!-- form invalid -->
+              <div *ngIf="this.loginForm.get('pswd')?.errors&&this.loginForm.get('pswd')?.touched" class="text-danger">Invalid Password</div>
+              <!-- errormsage -->
+              <div class="text-danger">{{errorMsg}}</div>
+
+
+              <div class="mt-4">
+                <button type="submit"  class="hjh btn btn-light" >Login &nbsp;
+
+                  <span *ngIf="successMsg" class="spinner-border text-secondary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </span>
+
+
+                </button> 
+              </div><br>
+              <span>
+                New User? Click Here to<a class="btn btn-link" routerLink="/products/register">Register</a> 
+              </span>
+        </form>
+    </div>
+    <div class="col-md-4 mt-3"></div>
+</div>

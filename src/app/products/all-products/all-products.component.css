@@ -1,0 +1,75 @@
+/* header styling */
+.hder{  
+    width: 100%;
+    height: 400px;
+    background-color:rgb(245, 241, 241);
+    overflow: hidden; 
+    /* background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20220522/pngtree-ecommerce-banner-planning-segmentation-selection-image_1375247.jpg);   */
+}
+.hder h1{
+    font-size: 70px;
+    font-weight: 500;
+    text-shadow: 2px 2px 2px rgb(156, 114, 173);
+}
+@media (max-width:450px){
+    .hder h1{
+        font-size: 50px;
+    }
+}
+
+
+/* about styling */
+.about{
+    width: 80%;
+    height: 350px;
+    background-color: rgb(151, 87, 215);
+    border-radius: 50px;
+     box-shadow: -3px -3px 5px 6px #8b7e98;
+     margin-top: -50px; 
+     overflow-x: hidden; 
+}
+.about h1{
+    font-weight: 500;
+}
+.about p{
+    font-size: 18px;
+    line-height: 33px;   
+}
+
+@media  (max-width:768px) {
+    .about p{
+        font-size: 15px;
+        line-height: 25px;   
+    }
+    
+}
+
+.btncolor:hover{
+    /* background-color: #7d51a9 */
+    background:rgb(127, 8, 183);
+    color: white;
+    box-shadow: 0 0 5px rgb(124, 11, 176),0 0 25px rgb(171, 39, 233);  
+}
+
+.cardcolor:hover{
+    box-shadow: -3px -3px 5px 6px #8b7e98 ;
+    transition: 1s;
+    transform: scale(0.9);
+}
+
+.cardcolor{
+    transition: 1s;
+}
+
+.formcolor{
+    transition: 1s;
+    
+}
+
+.formcolor:hover{
+    transform:scale(1.1);
+    transition: 1s;
+   
+}

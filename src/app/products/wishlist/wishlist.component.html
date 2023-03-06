@@ -1,0 +1,57 @@
+<div class="container wishi">
+    <div class="style2 text-center">
+        <h1 class="">Wishlist <i class="fa-sharp fa-solid fa-heart" style="color: red"></i></h1>
+    </div>
+</div>
+
+<!-- empty showuing -->
+<div *ngIf="emptyWish" class="container about text-center style2 animate__animated animate__fadeIn" >
+    <div class="p-5 text-center"   >
+         <h1 style="font-weight: 700; color: rgb(64, 62, 165);">Your Wishlist is empty</h1>
+         <p style="text-align: justify; font-size: 18px;" class="text-center mt-4"></p>
+         <!-- <h4>check for the products</h4> -->
+         <button routerLink=""  class="kjh btn btn-light mt-4" >View products &nbsp;
+  
+        </button> 
+    </div>
+    </div><br>
+
+<section *ngIf="!emptyWish" class="py-5">
+    <div class="container px-4 px-lg-5 mt-1">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center" >
+            <div class="col mb-5" *ngFor="let prod of products">
+                <div class="cardcolor card h-100 p-3" style="border-radius: 30px; background-color: rgb(200, 187, 211);">
+                    <!-- Product image-->
+                    <img height="200px" style="border-radius: 30px;" class="card-img-top" [src]="prod.image" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">{{prod.title |slice:0:16}}..</h5>
+                            <!-- Product price-->
+                           <p class="text-success">
+                                ${{prod.price}}
+
+                           </p>    
+
+                            <div >
+                                <button (click)="removeWishlist(prod)" class="text-danger btn" > <i class="fa-solid fa-trash  "></i></button>
+                                <button (click)="addToCart(prod)" class=" btn text-success mt-auto "  ><i class="iconbtn fa-solid fa-cart-plus  "></i></button>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" routerLink="/products/view-product/{{prod.id}}">View options</a></div>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</section>
+    

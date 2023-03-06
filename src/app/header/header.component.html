@@ -1,0 +1,24 @@
+   <!-- Navigation-->
+   <nav class="navbar navbar-expand-lg  text-uppercase fixed-top " id="mainNav" style="background-color: rgb(86, 26, 138);">
+    <div class="container ">
+        <a class="navbar-brand animate__animated animate__lightSpeedInLeft" routerLink="" >
+            <img  width="50px" src="https://cdn-icons-png.flaticon.com/512/1179/1179868.png" alt="">&nbsp; Home-Mate</a>
+        <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarResponsive">
+            <ul class="navbar-nav ms-auto">
+
+                <li *ngIf="!user" class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" routerLink="products/login">Login <i class="fa-solid fa-user"></i></a></li>
+                <li *ngIf="user" class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" routerLink="products/login">{{user |slice:0:5}}<i class="fa-solid fa-user"></i></a></li>
+              
+                <li *ngIf="user" class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" routerLink="products/wishlist">Wishlist <i class="fa-sharp fa-solid fa-heart" style="color: red"></i></a></li>
+                <li *ngIf="user" class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" routerLink="products/order">Orders <i class="fa-solid fa-truck-fast"></i></a></li>
+                <li *ngIf="user" class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" routerLink="products/cart"><i class="fa-sharp fa-solid fa-cart-shopping"></i> Cart</a></li>
+                <!-- <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a></li> -->
+            </ul>
+        </div>
+    </div>
+</nav>
+

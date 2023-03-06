@@ -1,0 +1,46 @@
+.hjh:hover{
+    background:rgb(127, 8, 183);
+    color: white;
+    box-shadow: 0 0 5px rgb(124, 11, 176),0 0 25px rgb(171, 39, 233);  
+}
+.kjh:hover{
+    background:rgb(212, 50, 50);
+    color: white;
+    box-shadow: 0 0 5px rgb(124, 11, 176),0 0 25px rgb(171, 39, 233);  
+}
+
+.lo{
+   
+    width: 450px;
+    height: 300px;
+    border-radius: 20px;
+    background-color: blueviolet;
+    text-align: center;
+  
+}
+
+
+.about{
+    width: 60%;
+    height: 300px;
+    background-color: rgb(188, 160, 217);
+    border-radius: 50px;
+     box-shadow: -3px -3px 5px 6px #8b7e98;
+     margin-top: 100px; 
+     overflow-x: hidden; 
+}
+.about h1{
+    font-weight: 500;
+}
+.about p{
+    font-size: 20px;
+    
+}
+
+@media  (max-width:768px) {
+    .about p{
+        font-size: 15px;
+        line-height: 25px;   
+    }
+    
+}

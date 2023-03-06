@@ -1,0 +1,53 @@
+.wishi{
+    margin-top: 150px;
+}
+
+.cardcolor{
+    background:rgb(127, 8, 183);
+    color: rgb(23, 22, 22);
+   
+    transition: 1s;
+}
+.cardcolor:hover{
+   
+    transition: 1s;
+    box-shadow: 0 0 5px rgb(124, 11, 176),0 0 25px rgb(171, 39, 233); 
+}
+.iconbtn:hover{
+    transform: scale(1.1);
+    transition: 1s;
+}
+.iconbtn{
+    transition: 1s;
+}
+
+.about{
+    width: 60%;
+    height: 300px;
+    background-color: rgb(165, 99, 234);
+    border-radius: 50px;
+     box-shadow: -3px -3px 5px 6px #8b7e98;
+     margin-top: 100px; 
+     /* overflow-x: hidden;  */
+     transition: 1s;
+}
+.about:hover{
+    transition: 1s;
+    transform: scale(1.1);
+    box-shadow: 0 0 5px rgb(124, 11, 176),0 0 25px rgb(171, 39, 233);  
+}
+.about h1{
+    font-weight: 500;
+}
+.about p{
+    font-size: 20px;
+    
+}
+
+@media  (max-width:768px) {
+    .about p{
+        font-size: 15px;
+        line-height: 25px;   
+    }
+    
+}

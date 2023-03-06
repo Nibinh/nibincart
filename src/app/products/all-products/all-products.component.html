@@ -1,0 +1,74 @@
+<div class="mn" style="margin-top: 73px;">
+
+    <!-- header part -->
+<header class="hder text-center style1">
+   <div class="mt-4" >
+        <img class="" width="200px" src="https://img.pikbest.com/png-images/20191028/push-shopping-cart-to-woman-gif_2515298.png!bw700" alt="">
+      <h1>Home Mate</h1>
+  </div>   
+   </header>
+
+   <!-- about part -->
+   <div class="container about text-center style2" >
+    <div class="p-5 "   >
+         <h1>About</h1>
+         <p style="text-align: justify;">"Welcome to Home Mate, your one-stop shop for all your online shopping needs. With a wide range of products, easy navigation, and secure checkout, we make online shopping a breeze. Browse through our carefully curated collection of product categories and find what you're looking for at unbeatable prices. Our commitment to customer satisfaction means that you can shop with confidence, knowing that you'll receive high-quality products and top-notch customer service. Start shopping now and experience the convenience of online shopping with Home Mate."</p>
+    </div>
+    </div><br>
+    <hr class="mt-5">
+
+    <div class="text-center mt-5">
+        <h2><i class="fa-solid fa-cart-shopping"></i> Products </h2>
+    </div>
+
+<!-- search bar part -->
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-3 col-sm-3 col-2"></div>
+        <div class="col-md-6 col-sm-6 col-8">
+            <form class="formcolor">
+                <input (keyup)="search($event)" type="text" class="form-control" placeholder="Enter the Product" style="background-color: rgb(187, 163, 207); border-radius: 20px;">
+            </form>
+        </div>
+        <div class="col-md-3 col-sm-3 col-2"></div>
+       
+    </div>
+</div>
+
+<!-- products part -->
+
+<section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row mt-5 gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center" >
+            <div class="col mb-5 " *ngFor=" let products of allProducts| filter:searchKey : 'title' ">
+                <div class="card h-100 p-3 cardcolor" style="border-radius: 30px; background-color: rgb(254, 253, 255);">
+                    <!-- Product image-->
+                    <img style="border-radius: 30px;" height="200px" class="card-img-top" [src]="products.image" [alt]="products.title" />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">{{products.title |slice:0:17}}...</h5>
+                            <!-- Product price-->
+                          <div class="text-success"> ${{products.price}}</div >
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btncolor btn btn-outline-dark mt-auto" routerLink="view-product/{{products.id}}">See more</a></div>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</section>
+    
+  
+  
+
+  
+
+
+    
+</div>

@@ -1,0 +1,52 @@
+<div class="container mt-5">
+    <div class="text-center carthdng">
+        <h1 >Ordered items<i class="fa-solid fa-truck-fast"></i></h1>
+    </div>
+</div>
+
+<div *ngIf="dsc" class="container">
+    <div class="text-center">
+        <img width="300px" src="https://thumbs.gfycat.com/HelplessValidBettong-size_restricted.gif" alt="">
+        <h2>Page is empty!!!</h2>
+    </div>
+</div>
+
+
+
+<!-- table -->
+
+<div *ngIf="!dsc" class="container mt-5">
+    <div class="row mt-5">
+        <div class="col-md-2"></div>
+
+        <div class="col-md-8 border rounded p-4 mt-5 text-center">
+            <table class="table ">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Poduct Image</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody >
+                    <tr *ngFor="let products of allOrders let i=index" >
+                        <th>{{i}}</th>
+                        <th><img width="50px" [src]="products.image" alt=""></th>
+                        <th>{{products.price}}</th>
+                        <th><a (click)="removeOrder(products)" class="text-danger ms-3"><i class="fa-solid fa-trash "></i></a></th>
+                  
+                    </tr>
+                   
+                </tbody>
+            </table>
+
+            <div >  
+                <button class="btn btn-primary ms-5" routerLink="">Shop More</button>
+            </div>
+
+        </div>
+
+        <div class="col-md-2"></div>
+    </div>
+</div>

@@ -1,0 +1,47 @@
+
+
+.error-container {
+    text-align: center;
+    padding: 100px 0;
+  }
+  
+  h1 {
+    font-size: 72px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+  }
+  
+  .back-home {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+  }
+  
+  @media (max-width: 767px) {
+    .error-container {
+      padding: 50px 0;
+    }
+  
+    h1 {
+      font-size: 48px;
+    }
+  
+    h2 {
+      font-size: 24px;
+    }
+  }
